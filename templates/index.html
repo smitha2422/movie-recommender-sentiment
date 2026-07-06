@@ -1,0 +1,46 @@
+<!-- f flask import Flask, render_template, jsonify
+import pandas as pd
+import numpy as np
+import sklearn
+import nltk
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Movie Recommender & Sentiment API is running perfectly!"
+
+if __name__ == '__main__':
+    app.run(debug=True)rom -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender & Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🎬 Movie Recommender & Sentiment Analyzer</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Get Movie Recommendations</h2>
+            <input type="text" id="movieInput" placeholder="Enter a movie title (e.g. Toy Story)">
+            <button onclick="getRecommendations()">Recommend</button>
+            <ul id="recommendList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Analyze a Review's Sentiment</h2>
+            <textarea id="reviewInput" placeholder="Paste a movie review here..."></textarea>
+            <button onclick="getSentiment()">Analyze</button>
+            <p id="sentimentResult"></p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
