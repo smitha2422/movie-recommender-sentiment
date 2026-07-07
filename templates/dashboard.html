@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="logo">🎬 Movie Recommender</span>
+        <div>
+            <span>Hi, {{ username }}</span>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Get Movie Recommendations</h2>
+            <input type="text" id="movieInput" placeholder="Enter a movie title (e.g. Toy Story)">
+            <button onclick="getRecommendations()">Recommend</button>
+            <ul id="recommendList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Analyze a Review's Sentiment</h2>
+            <textarea id="reviewInput" placeholder="Paste a movie review here..."></textarea>
+            <button onclick="getSentiment()">Analyze</button>
+            <p id="sentimentResult"></p>
+        </section>
+
+        <section class="card">
+            <h2>⭐ My Watchlist</h2>
+            <ul id="watchlistItems"></ul>
+        </section>
+
+        <section class="card">
+            <h2>🕘 Recent Sentiment Checks</h2>
+            <ul id="historyItems"></ul>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

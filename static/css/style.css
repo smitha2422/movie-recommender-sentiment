@@ -1,4 +1,4 @@
-* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+/* * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 body { margin: 0; background: #0f1117; color: #f0f0f0; }
 header { background: #1a1d29; padding: 24px; text-align: center; }
 main { max-width: 700px; margin: 40px auto; padding: 0 16px; }
@@ -9,4 +9,37 @@ button { background: #e50914; color: white; border: none; padding: 10px 20px; bo
 button:hover { background: #b8070f; }
 ul { list-style: none; padding: 0; }
 li { padding: 8px; border-bottom: 1px solid #2a2d3a; }
-#sentimentResult { font-size: 18px; font-weight: bold; margin-top: 12px; }
+#sentimentResult { font-size: 18px; font-weight: bold; margin-top: 12px; } */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1d29;
+    padding: 16px 32px;
+}
+.navbar .logo { font-size: 20px; font-weight: bold; }
+.logout-btn { color: #e50914; margin-left: 16px; text-decoration: none; font-weight: bold; }
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #0f1117;
+}
+.auth-card {
+    background: #1a1d29;
+    padding: 32px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+}
+.switch-link a { color: #e50914; }
+
+li button {
+    margin-left: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+}
